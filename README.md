@@ -112,3 +112,6 @@
 - belongs_to :user
 
 ![ER図](weight.png)
+
+![ER図](weight_up.png)
+
