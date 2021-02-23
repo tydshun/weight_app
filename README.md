@@ -113,5 +113,6 @@
 
 ![ER図](weight.png)
 
+# ページ遷移図
 ![ER図](weight_up.png)
 
