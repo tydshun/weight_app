@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
       content.classList.toggle("outview");
       text.classList.toggle("outview");
       btn.classList.toggle("outview");
-      btn.innerHTML = ("Enjoy");
+      btn.innerHTML = ("Tweet");
       const outviewText = btn.textContent;
       btn.innerHTML = null;
       outviewText.split('').forEach(function (c) {
