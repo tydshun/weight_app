@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     
   //Tweetボタンを押した時
    const btn = document.querySelector(".char1");
-   btn.addEventListener("click",(e)=>{;
+   btn.addEventListener("click",(e)=>{
      console.log(e)
       // const title = document.querySelector(".header");
       const content = document.querySelector(".content-text");
