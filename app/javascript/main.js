@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
    btn.addEventListener("click",(e)=>{;
      console.log(e)
       // const title = document.querySelector(".header");
-      const content = document.querySelector(".content");
+      const content = document.querySelector(".content-text");
       const text = document.querySelector(".text-area");
       const add = document.querySelectorAll(".char")
       content.classList.toggle("outview");

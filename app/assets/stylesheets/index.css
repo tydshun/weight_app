@@ -368,7 +368,7 @@ a {
   height: calc(100vh - 100px);
 }
 
-.contentt {
+.content-text {
   position: absolute;
   top: 30%;
   left: 30%;
@@ -380,7 +380,7 @@ a {
   color: white;
 }
 
-.contentt.outview {
+.content-text.outview {
   -webkit-animation: kf-animate-chars2 1.3s;
           animation: kf-animate-chars2 1.3s;
   opacity: 0;
