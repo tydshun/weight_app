@@ -89,7 +89,7 @@
 
 | Column     | Type       | Options                        |
 | ---------- | ---------- | ------------------------------ |
-| title      | string     |                                |
+| title      | string     | null:false                     |
 | content    | text       |                                |
 | start_time | datetime   |                                |
 | user       | references | null: false, foreign_key: true |
