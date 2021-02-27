@@ -1,8 +1,9 @@
 require 'test_helper'
 
-class TweetsControllerTest < ActionDispatch::IntegrationTest
+class BlogsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get tweets_index_url
+    get blogs_index_url
     assert_response :success
   end
+
 end

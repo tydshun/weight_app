@@ -2,6 +2,7 @@ class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit]
   
   def index
+
     @tweets = Tweet.all
   end
 
@@ -51,6 +52,7 @@ class TweetsController < ApplicationController
 
   def set_tweet
     @tweet = Tweet.find(params[:id])
+
   end
 end
 
