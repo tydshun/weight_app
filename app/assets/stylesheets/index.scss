@@ -1,6 +1,5 @@
 body{
   margin: 0;
-  
 }
 html{
   font-family: Cormorant Garamond;
@@ -23,15 +22,12 @@ a{
   &.inview{
     background-color: white;
   }
-  
   & .header-left{
-    
     color:white;
     padding-left: 3vw;
     font-size: 25px;
     display: flex;
     text-align: center;
- 
     & .char-list{
       color: white;
       & .char{
@@ -50,11 +46,7 @@ a{
               animation-delay: $i * 0.04s;
           }
         }
-        
-            } 
-
-       
-      
+            }
     }
   }
   & .header-right{
@@ -62,20 +54,15 @@ a{
       display: flex;
       list-style: none;
       font-size: 20px;
-      
-      
       & li{
         margin-right: 50px;
         text-decoration: none;
         color: white;
         cursor: pointer;
-        
         &:hover{
           opacity: 0.5;
          transition: 0.4s;
         }
-        
-        
         & span{
           color: white;
           opacity:0;
@@ -88,12 +75,11 @@ a{
           animation-iteration-count: 1;
           animation-direction: normal;
           animation-fill-mode: forwards;
-          @for $i from 1 through 9 {
+          @for $i from 1 through 15{
             &:nth-child(#{$i}) {
                 animation-delay: $i * 0.04s;
             }
           }
-         
         }
         & a .char{
           color: white;
@@ -106,18 +92,14 @@ a{
           animation-iteration-count: 1;
           animation-direction: normal;
           animation-fill-mode: forwards;
-          @for $i from 1 through 9 {
+          @for $i from 1 through 15 {
             &:nth-child(#{$i}) {
                 animation-delay: $i * 0.04s;
             }
           }
-          
         }
-        
       }
       & .btn{
-        
-        
         margin-right: 50px;
         font-size: 20px;
         // border-radius: 20px;
@@ -133,8 +115,6 @@ a{
           animation-iteration-count: 1;
           animation-direction: normal;
           animation-fill-mode: forwards;
-      
-
         & .char{
           opacity:0;
           display: inline-block;
@@ -145,16 +125,14 @@ a{
           animation-iteration-count: 1;
           animation-direction: normal;
           animation-fill-mode: forwards;
-          @for $i from 1 through 9 {
+          @for $i from 1 through 15 {
             &:nth-child(#{$i}) {
                 animation-delay: $i * 0.04s;
             }
           }
         }
-       
       }
     }
-   
   }
 }
 .char{
@@ -178,22 +156,20 @@ a{
     // visibility: hidden;
     animation: kf-animate-chars2 1.3s;
     opacity: 0;
-    
   }
-  
+  &.inview{
+    animation: kf-animate-chars2 1.3s;
+    opacity: 0;
+  }
 }
-
 @keyframes kf-animate-chars {
   0% {
     opacity: 0;
     transform: translate(-50%,50%);
-    
   }
-
   100% {
     opacity: 1;
     transform: translate(-50%,0);
-    
   }
 }
 @keyframes kf-animation {
@@ -201,7 +177,6 @@ a{
     opacity: 0;
     transform: translateY(-100%);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -211,41 +186,30 @@ a{
   0% {
     opacity: 1;
     transform: translate(-50%,0);
-    
   }
-
   100% {
     opacity: 0;
     transform: translate(50%,0);
-    
   }
 }
-
-
-
 .top-image2 {
   object-fit: cover;
   width: 100vw;
   height: calc(100vh - 100px);
 }
-
-
-
 .text-area{
   width: 60%;
+  height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   visibility: hidden;
-  
-   
-  
-   
-     
-  
+  &.inview{
+    visibility: hidden;
+  }
   &.outview{
     visibility: visible;
     position: relative;
-    top: 10%;
+    // top: 5%;
     left: 30%;
       display: flex;
       align-items: center;
@@ -253,21 +217,11 @@ a{
       animation: kf-animate-chars 1.3s;
       // opacity: 0;
       animation-fill-mode: both;
-      cursor: pointer;
-    
-     
-   
     & .text{
-      
       color: white;
-     
       font-size: 30px;
       font-family: Cormorant Garamond ;
-      
-      // border-radius: 10px; 
-   
-      
-      
+      // border-radius: 10px;
       &:nth-child(2){
         width: 50%;
         height: 50px;
@@ -276,7 +230,7 @@ a{
         background-color: rgba(134, 132, 132, 0.1);
       }
       &:nth-child(4){
-        height: 60%;
+        height: 50%;
         width: 70%;
         border:rgba(12,12,12,0.1) solid 2px;
         // border-radius: 10px;
@@ -289,24 +243,51 @@ a{
         letter-spacing: 2px;
         margin-top: 20px;
         border:rgba(12,12,12,0.1) solid 2px;
-
         cursor: pointer;
         font-size: 20px;
-        
-     
-        
       }
-      
     }
   }
 }
 .text1{
   color: white;
   font-size: 30px;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .text2{
   color: white;
   font-size: 30px;
-  margin-top: 10px;
+  margin:10px 0 ;
 }
+//一覧表示
+.photo-ul{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   width: 50%;
+   height: 80%;
+   top: 5%;
+   left: 5%;
+   visibility: hidden;
+    &.outview{
+      visibility: hidden;
+    }
+    &.inview{
+      visibility: visible;
+      left: 30%;
+      animation: kf-animate-chars 1.3s;
+      // opacity: 0;
+      animation-fill-mode: both;
+    }
+    & .photo-li{
+      width: 100%;
+      background-color:  rgba(134, 132, 132, 0.1);
+      height: 100%;
+    }
+    & .photo-text{
+      color: white;
+      font-size: 30px;
+    }
+  }
