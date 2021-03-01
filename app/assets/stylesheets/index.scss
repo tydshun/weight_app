@@ -17,7 +17,6 @@ a{
   height:100px;
   display:flex;
   justify-content: space-between;
-  
 
   align-items: center;
   background-color: rgba(36, 36, 35, 0.323);
@@ -52,7 +51,7 @@ a{
     }
   }
   & .header-right{
-    
+
     & .menu-list{
       display: flex;
       list-style: none;
@@ -102,7 +101,9 @@ a{
           }
         }
       }
+
       & .btn1{
+
         margin-right: 50px;
         font-size: 20px;
         // border-radius: 20px;
@@ -203,9 +204,13 @@ a{
 .text-area{
   width: 60%;
   height: calc(100vh - 100px);
+
   color: white;
-  // display: flex;
-  // flex-direction: column;
+
+
+  display: flex;
+  flex-direction: column;
+
   visibility: hidden;
   &.inview{
     visibility: hidden;
@@ -221,6 +226,7 @@ a{
       animation: kf-animate-chars 1.3s;
       // opacity: 0;
       animation-fill-mode: both;
+
     // & .text{
     //   color: white;
     //   font-size: 30px;
@@ -303,6 +309,49 @@ a{
   font-family: Cormorant Garamond;
 }
 
+
+    & .text{
+      color: white;
+      font-size: 30px;
+      font-family: Cormorant Garamond ;
+      // border-radius: 10px;
+      &:nth-child(2){
+        width: 50%;
+        height: 50px;
+        border:rgba(12,12,12,0.1) solid 2px;
+        // border-radius: 10px;
+        background-color: rgba(134, 132, 132, 0.1);
+      }
+      &:nth-child(4){
+        height: 50%;
+        width: 70%;
+        border:rgba(12,12,12,0.1) solid 2px;
+        // border-radius: 10px;
+        background-color: rgba(134, 132, 132, 0.1);
+        font-size: 25px;
+      }
+      &:nth-child(5){
+        width:20%;
+        background-color: rgba(134, 132, 132, 0.1);
+        letter-spacing: 2px;
+        margin-top: 20px;
+        border:rgba(12,12,12,0.1) solid 2px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+  }
+}
+.text1{
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.text2{
+  color: white;
+  font-size: 30px;
+  margin:10px 0 ;
+}
 //一覧表示
 .photo-ul{
    display: flex;
@@ -313,6 +362,7 @@ a{
    width: 50%;
    height: 80%;
    top: 3%;
+
    left: 5%;
    visibility: hidden;
     &.outview{

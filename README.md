@@ -51,7 +51,7 @@
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| name     | string | null: false |
+| nickname | string | null: false |
 | email    | string | null: false |
 | password | string | null: false |
 
@@ -66,9 +66,6 @@
 | ------ | ------ | ----------- |
 | title  | string | null: false |
 | text   | text   | null: false |
-| height | string |             |
-| weight | string |             |
-
 
 ### Association
 
@@ -90,10 +87,12 @@
 
 ## calender テーブル
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| memo    | string     |                                |
-| user    | references | null: false, foreign_key: true |
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| title      | string     | null:false                     |
+| content    | text       |                                |
+| start_time | datetime   |                                |
+| user       | references | null: false, foreign_key: true |
 
 ### Association
 

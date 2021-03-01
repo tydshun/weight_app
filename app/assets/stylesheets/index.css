@@ -330,7 +330,10 @@ a {
           animation-delay: 0.6s;
 }
 
+
 .header .header-right .menu-list .btn1 {
+
+
   margin-right: 50px;
   font-size: 20px;
   border: white solid 3px;
@@ -354,7 +357,9 @@ a {
           animation-fill-mode: forwards;
 }
 
+
 .header .header-right .menu-list .btn1 .char {
+
   opacity: 0;
   display: inline-block;
   -webkit-animation-name: kf-animation;
@@ -374,76 +379,99 @@ a {
 }
 
 .header .header-right .menu-list .btn1 .char:nth-child(1) {
+
   -webkit-animation-delay: 0.04s;
           animation-delay: 0.04s;
 }
 
+
 .header .header-right .menu-list .btn1 .char:nth-child(2) {
+
   -webkit-animation-delay: 0.08s;
           animation-delay: 0.08s;
 }
 
+
 .header .header-right .menu-list .btn1 .char:nth-child(3) {
+
   -webkit-animation-delay: 0.12s;
           animation-delay: 0.12s;
 }
 
 .header .header-right .menu-list .btn1 .char:nth-child(4) {
+
   -webkit-animation-delay: 0.16s;
           animation-delay: 0.16s;
 }
 
 .header .header-right .menu-list .btn1 .char:nth-child(5) {
+
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
 .header .header-right .menu-list .btn1 .char:nth-child(6) {
+
   -webkit-animation-delay: 0.24s;
           animation-delay: 0.24s;
 }
 
+
 .header .header-right .menu-list .btn1 .char:nth-child(7) {
+
   -webkit-animation-delay: 0.28s;
           animation-delay: 0.28s;
 }
 
+
 .header .header-right .menu-list .btn1 .char:nth-child(8) {
+
   -webkit-animation-delay: 0.32s;
           animation-delay: 0.32s;
 }
 
 .header .header-right .menu-list .btn1 .char:nth-child(9) {
+
   -webkit-animation-delay: 0.36s;
           animation-delay: 0.36s;
 }
 
 .header .header-right .menu-list .btn1 .char:nth-child(10) {
+
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
 .header .header-right .menu-list .btn1 .char:nth-child(11) {
+
   -webkit-animation-delay: 0.44s;
           animation-delay: 0.44s;
 }
 
+
 .header .header-right .menu-list .btn1 .char:nth-child(12) {
+
   -webkit-animation-delay: 0.48s;
           animation-delay: 0.48s;
 }
 
+
 .header .header-right .menu-list .btn1 .char:nth-child(13) {
+
   -webkit-animation-delay: 0.52s;
           animation-delay: 0.52s;
 }
 
+
 .header .header-right .menu-list .btn1 .char:nth-child(14) {
+
   -webkit-animation-delay: 0.56s;
           animation-delay: 0.56s;
 }
 
+
 .header .header-right .menu-list .btn1 .char:nth-child(15) {
+
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
@@ -570,7 +598,16 @@ a {
 .text-area {
   width: 60%;
   height: calc(100vh - 100px);
+
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+
   visibility: hidden;
 }
 
@@ -596,6 +633,7 @@ a {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
+
 
 .text-all {
   display: -webkit-box;
@@ -626,26 +664,46 @@ a {
 }
 
 .text3 {
+
+.text-area.outview .text {
+  color: white;
+  font-size: 30px;
+  font-family: Cormorant Garamond;
+}
+
+.text-area.outview .text:nth-child(2) {
+
   width: 50%;
   height: 50px;
   border: rgba(12, 12, 12, 0.1) solid 2px;
   background-color: rgba(134, 132, 132, 0.1);
+
   color: white;
   font-size: 30px;
   font-family: Cormorant Garamond;
 }
 
 .text4 {
+}
+
+.text-area.outview .text:nth-child(4) {
+
   height: 50%;
   width: 70%;
   border: rgba(12, 12, 12, 0.1) solid 2px;
   background-color: rgba(134, 132, 132, 0.1);
   font-size: 25px;
+
   color: white;
   font-family: Cormorant Garamond;
 }
 
 .text5 {
+
+}
+
+.text-area.outview .text:nth-child(5) {
+
   width: 20%;
   background-color: rgba(134, 132, 132, 0.1);
   letter-spacing: 2px;
@@ -653,8 +711,23 @@ a {
   border: rgba(12, 12, 12, 0.1) solid 2px;
   cursor: pointer;
   font-size: 20px;
+
   color: white;
   font-family: Cormorant Garamond;
+
+}
+
+.text1 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.text2 {
+  color: white;
+  font-size: 30px;
+  margin: 10px 0;
+
 }
 
 .photo-ul {
@@ -674,6 +747,7 @@ a {
   position: absolute;
   width: 50%;
   height: 80%;
+
   top: 3%;
   left: 5%;
   visibility: hidden;
