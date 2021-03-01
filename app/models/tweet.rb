@@ -1,5 +1,4 @@
 class Tweet < ApplicationRecord
-
   # has_many :comments, dependent: :destroy
   belongs_to :user
   has_one_attached :image
@@ -8,3 +7,4 @@ class Tweet < ApplicationRecord
 
   validates :text, presence: true
 
+end
