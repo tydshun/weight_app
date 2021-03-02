@@ -1,10 +1,9 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit]
-  
+
   def index
     @tweets = Tweet.all
     @tweet = Tweet.new
-
   end
 
   def new
@@ -17,7 +16,6 @@ class TweetsController < ApplicationController
       redirect_to action: :index
     else
       render :index
-
     end
   end
 
@@ -50,7 +48,6 @@ class TweetsController < ApplicationController
   private
   def tweet_params
     params.require(:tweet).permit(:title, :text).merge(user_id: current_user.id)
-
   end
 
   def set_tweet
@@ -58,4 +55,3 @@ class TweetsController < ApplicationController
 
   end
 end
-
