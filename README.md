@@ -59,6 +59,8 @@
 
 - has_many :tweets
 - has_many :comments
+- has_one  :calendar
+- has_one  :weight
 
 ## Tweets テーブル
 
@@ -98,6 +100,19 @@
 
 - belongs_to :user
 
+## weight テーブル
+
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| title      | float      | null:false                     |
+| user       | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+
+
+
 ## favorite テーブル
 
 | Column  | Type       | Options                        |
@@ -110,7 +125,7 @@
 - belongs_to :tweet
 - belongs_to :user
 
-![ER図](weight.png)
+![ER図](weight_table.png)
 
 # ページ遷移図
 ![ER図](weight_up.png)
