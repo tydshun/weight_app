@@ -12,11 +12,9 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = Tweet.new(tweet_params)
-    if @tweet.save
-      redirect_to action: :index
-    else
-      render :index
-    end
+    @tweet.save
+    render json:{tweet: @tweet}
+  
   end
 
   def show
