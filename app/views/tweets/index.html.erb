@@ -22,7 +22,7 @@
   <div class="header-right">
   <ul class = "menu-list">
   <li class = "char1"><span class="char">T</span><span class="char">w</span><span class="char">e</span><span class="char">e</span><span class="char">t</span></li>
-  <li class = "char2"><span class="char">T</span><span class="char">w</span><span class="char">e</span><span class="char">e</span><span class="char">t</span><span class="char">s</span><span class="char">L</span><span class="char">i</span><span class="char">s</span><span class="char">t</span></li>
+  <li class = "char2 char"><span class="char">T</span><span class="char">w</span><span class="char">e</span><span class="char">e</span><span class="char">t</span><span class="char">s</span><span class="char">L</span><span class="char">i</span><span class="char">s</span><span class="char">t</span></li>
   <li><a href="/users/sign_up"><span class="char">S</span><span class="char">i</span><span class="char">g</span><span class="char">n</span>
   <span class="char">u</span><span class="char">p</span></a></li>
   <li><a href="#"><span class="char">i</span><span class="char">t</span><span class="char">e</span><span class="char">m</span></a></li>
@@ -31,7 +31,7 @@
   </div>
  </header>
  <div id="container">
-    <div class= "text-area">
+    <div class= "text-area area-text">
       <%= form_with model: @tweet, class: "text-all", local: true do |f| %>
       <%# <%= form_with model: @tweet, data: {remote: true} do |f| %>
         <%= f.label :title, "Title", class: "text1" %><br />
@@ -41,17 +41,23 @@
         <%= f.text_area :text, class: "text4" %>
       <%# <span class="text2">Text</span> %>
       <%# <textarea class="text" name="" id="" cols="30" rows="10"></textarea> %>
-        <%= f.submit "Tweet", class: "text5" %>
-      <%# <input class="text" type="submit" value="Tweet"> %>
+        <%# <%= f.submit "Tweet", class: "text5" %>
+        <div id="sign-btn">
+          <button class="btn slide-bg"><span></span>Sign up</button>
+        </div>
+      
       <% end %>
+      
     </div>
-    <div class= "content-text">
+    <div class= "content-text text-content">
       <p>Let's do our best  <br>to manage weight !!</p>
       <%# <%= current_user.nickname %>
     </div>
-    <div class = "photo-ul">
+    <div class = "photo-ul ul-photo">
      <p class = "photo-text">PhotoList</p>
      <div class = "photo-li">
+     <div id = "list">
+     </div>
      <% @tweets.each do |tweet| %>
      <div>
       <p><%= tweet.title %></p>
