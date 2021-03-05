@@ -329,9 +329,33 @@ a{
       width: 100%;
       background-color:  rgba(134, 132, 132, 0.1);
       height: 100%;
+      color: white;
     }
     & .photo-text{
       color: white;
       font-size: 30px;
     }
-  } 
+} 
+
+// 投稿一覧
+
+.photo-li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.photo-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 33%;
+  height: 50%;
+}
+.photo-img {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  margin-bottom: 5px;
+}
