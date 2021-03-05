@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded",()=>{
-  const btnJson = document.querySelector(".btn");
+  const btnJson = document.querySelector(".text5");
   btnJson.addEventListener("click",(e)=>{
     const listPhoto = document.querySelector(".ul-photo")
     const textAll = document.querySelector(".area-text")
@@ -15,18 +15,17 @@ document.addEventListener("DOMContentLoaded",()=>{
         return null;
       }
       const item = XHR.response.tweet;
-      const list = document.getElementById("list");
+      const list = document.querySelector(".list-json");
       const formText = document.querySelector(".text3");
       const formText2 = document.querySelector(".text4");
       const HTML = `
-         <div class = "post" data-id = ${item.id}>
-            <div class = "post-data">
-            投稿日時 :${item.created_at.slice(0,10)+ " " + item.created_at.slice(11,16)}
+         <li class = "photo-up">
+            <div class = "photo-img">
             </div>
-            <div class = "post-content">
-            ${item.text}
-            </div>
-         </div>`
+            <span>
+            ${item.title}
+            </span>
+         </li>`;
       list.insertAdjacentHTML("afterend",HTML);
       formText.value = "";
       formText2.value = "";

@@ -339,11 +339,12 @@ a{
 
 // 投稿一覧
 
+
 .photo-li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  overflow: hidden;
+  overflow: scroll;
 }
 .photo-up {
   display: flex;
@@ -355,7 +356,7 @@ a{
 }
 .photo-img {
   height: 100px;
-  width: 100px;
+  width: 150px;
   background-color: white;
   margin-bottom: 5px;
 }

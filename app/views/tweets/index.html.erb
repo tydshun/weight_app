@@ -33,7 +33,7 @@
 
  <div id="container">
     <div class= "text-area area-text">
-      <%= form_with model: @tweet, class: "text-all", local: true do |f| %>
+      <%= form_with model: @tweet, class: "text-all" do |f| %>
       <%# <%= form_with model: @tweet, data: {remote: true} do |f| %>
         <%= f.label :title, "Title", class: "text1" %><br />
         <%= f.text_field :title, class: "text3" %>
@@ -42,10 +42,8 @@
         <%= f.text_area :text, class: "text4" %>
       <%# <span class="text2">Text</span> %>
       <%# <textarea class="text" name="" id="" cols="30" rows="10"></textarea> %>
-        <%# <%= f.submit "Tweet", class: "text5" %>
-        <div id="sign-btn">
-          <button class="btn slide-bg"><span></span>Sign up</button>
-        </div>
+        <%= f.submit "Tweet", class: "text5"%>
+      
       
       <% end %>
       
@@ -56,16 +54,18 @@
     </div>
 
 <%# 投稿一覧 %>
-    <div class = "photo-ul">
+    <div class = "photo-ul ul-photo">
       <p class = "photo-text">PhotoList</p>
-        <div class = "photo-li">
+        <ul class = "photo-li">
+         <span class = "list-json"></span>
+            
             <% @tweets.each do |tweet| %>
-          <div class="photo-up">
-            <div class="photo-img"></div>
-            <span><%= tweet.title %></span>
-          </div>
-            <% end %>
-        </div>
+            <li class="photo-up">
+              <div class="photo-img"></div>
+               <span><%= tweet.title%></span>
+             <% end %>
+            </li> 
+        </ul>
 
     </div>
   </div>

@@ -713,7 +713,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .photo-up {
@@ -737,7 +737,7 @@ a {
 
 .photo-img {
   height: 100px;
-  width: 100px;
+  width: 150px;
   background-color: white;
   margin-bottom: 5px;
 }
