@@ -31,7 +31,7 @@
   </ul>
   </div>
  </header>
- <div id="container">
+  <div id="container">
     <div class= "text-area">
       <%= form_with model: @tweet, class: "text-all", local: true do |f| %>
       <%# <%= form_with model: @tweet, data: {remote: true} do |f| %>
@@ -51,19 +51,19 @@
       <%# <%= current_user.nickname %>
 
     </div>
-    <div class = "photo-ul">
-     <p class = "photo-text">PhotoList</p>
-     <div class = "photo-li">
-     <% @tweets.each do |tweet| %>
-     <div>
-      <p><%= tweet.title %></p>
-      <p><%= tweet.text %></p>
-     </div>
-     <% end %>
 
-     </div>
+<%# 投稿一覧 %>
+    <div class = "photo-ul">
+      <p class = "photo-text">PhotoList</p>
+        <div class = "photo-li">
+            <% @tweets.each do |tweet| %>
+          <div class="photo-up">
+            <div class="photo-img"></div>
+            <span><%= tweet.title %></span>
+          </div>
+            <% end %>
+        </div>
     </div>
   </div>
-</div>
 </body>
 </html>
