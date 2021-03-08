@@ -137,4 +137,174 @@ $cBlack: black;
 
 #error_explanation {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-} 
+}
+
+// Userプロフィールページ
+
+li {
+  list-style: none;
+}
+
+.mypage {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  & .left-mypage {
+    width: 30%;
+    height: 100vh;
+    
+    & .left-my-hight {
+      width: 100%;
+      height: 50vh;
+      background-color: black;
+
+      & .my-profile-img {
+        height: 300px;
+        width: 300px;
+        background-color: white;
+        margin: 20px auto ;
+        display: block;
+        
+      }
+      & .nickname-border{
+        border-bottom: 1px solid white;
+        margin: 0 30px;
+        & p {
+          margin: 14px 0 15px;
+          text-align: center;
+          font-size: 22px;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+      }
+    }
+    & .left-my-low {
+      background-color: black;
+      width: 100%;
+      
+      & ul {
+        padding: 110px 0 70px 50px;
+        margin: 0;
+        & .li-border{
+          margin-right: 240px;
+          & li {
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 30px;
+            border-bottom: 1px solid white;
+            cursor: pointer;
+  
+          }
+        }
+      }
+    }
+  }
+
+  & .right-mypage {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    & .profile {
+      &.in-calendar {
+        visibility: hidden;
+      }
+      &.in-graph {
+        visibility: hidden;
+      }
+      &.in-profile {
+        visibility: visible;
+      }
+      
+
+      & .right-my-hight {
+        height: 50%;
+        width: 100%;
+        position: absolute;
+          width: 100%;
+          height: 50%;
+        
+        background-color: black;
+        & .profile-header {
+          height: 50px;
+          padding-top: 10px;
+          background-color: black;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          & .profile-title {
+            font-weight: normal;
+            font-size: 40px;
+            margin-left: 20px;
+          }
+          & span {
+            margin-right: 10px;
+            height: 40px;
+            width:50px;
+            // border: 1px solid white;
+            border-bottom: 1px solid white;
+            color: white;
+            background-color:rgba($color: #000000, $alpha: 0);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+            padding: 0;
+            cursor: pointer
+
+          }
+        }
+        & .profile-text {
+          margin: 10px;
+          height: 300px;
+          border: 2px solid white;
+        }
+      }
+    .right-my-low {
+      height: 50%;
+      width: 100%;
+      background-color: black;
+      display: flex;
+      position: absolute;
+          
+          top: 50vh;
+      & .my-photo-title {
+        margin-left: 50px;
+        padding-top: 17px;
+        font-size: larger;
+      }
+      & .pad {
+        padding: 30px 0;
+      }
+    }
+   }
+  & .graph{
+    position: absolute;
+    top: 100px;
+    visibility: hidden;
+    &.in-calendar {
+      visibility: hidden;
+    }
+    &.in-graph {
+      visibility: visible;
+    }
+    &.in-profile {
+      visibility: hidden;
+    }
+  }
+  & .calendar{
+    position: absolute;
+    top: 50px;
+    visibility: hidden;
+    &.in-calendar {
+      visibility: visible;
+    }
+    &.in-graph {
+      visibility: hidden;
+    }
+    &.in-profile {
+      visibility: hidden;
+    }
+  }
+  }
+}

@@ -26,7 +26,9 @@
   <li><a href="/users/sign_up"><span class="char">S</span><span class="char">i</span><span class="char">g</span><span class="char">n</span>
   <span class="char">u</span><span class="char">p</span></a></li>
   <li><a href="#"><span class="char">i</span><span class="char">t</span><span class="char">e</span><span class="char">m</span></a></li>
-  <button class = "btn1 "><span class="char">b</span><span class="char">u</span><span class="char">t</span><span class="char">t</span><span class="char">o</span><span class="char">n</span></button>
+  <%= link_to users_show_path do %>
+    <button class = "btn1 "><span class="char">M</span><span class="char">y</span><span class="char">p</span><span class="char">a</span><span class="char">g</span><span class="char">e</span></button>
+  <% end %>
   </ul>
   </div>
  </header>
@@ -58,16 +60,18 @@
       <p class = "photo-text">PhotoList</p>
         <ul class = "photo-li">
          <span class = "list-json"></span>
-            
             <% @tweets.each do |tweet| %>
             <li class="photo-up">
               <div class="photo-img"></div>
                <span><%= tweet.title%></span>
              <% end %>
+            <%= paginate @tweets %>
             </li> 
-        </ul>
+        </ul> 
 
     </div>
   </div>
 </body>
+<%= javascript_pack_tag 'data.js' %>
+<%= javascript_pack_tag 'main.js' %>
 </html> 
