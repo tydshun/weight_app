@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit]
 
   def index
-    @tweets = Tweet.all.order(id: "DESC")
+    @tweets = Tweet.page(params[:page]).per(6)
     @tweet = Tweet.new
   end
 

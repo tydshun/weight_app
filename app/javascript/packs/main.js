@@ -1,5 +1,6 @@
 'use strict'
 document.addEventListener("DOMContentLoaded", function(){
+  
   //Tweetボタンを押した時
    const btn = document.querySelector(".char1");
    const content = document.querySelector(".content-text");

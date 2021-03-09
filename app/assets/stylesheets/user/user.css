@@ -168,4 +168,197 @@ label {
 #error_explanation {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+li {
+  list-style: none;
+}
+
+.mypage {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.mypage .left-mypage {
+  width: 30%;
+  height: 100vh;
+}
+
+.mypage .left-mypage .left-my-hight {
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+}
+
+.mypage .left-mypage .left-my-hight .my-profile-img {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  margin: 20px auto;
+  display: block;
+}
+
+.mypage .left-mypage .left-my-hight .nickname-border {
+  border-bottom: 1px solid white;
+  margin: 0 30px;
+}
+
+.mypage .left-mypage .left-my-hight .nickname-border p {
+  margin: 14px 0 15px;
+  text-align: center;
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.mypage .left-mypage .left-my-low {
+  background-color: black;
+  width: 100%;
+}
+
+.mypage .left-mypage .left-my-low ul {
+  padding: 110px 0 70px 50px;
+  margin: 0;
+}
+
+.mypage .left-mypage .left-my-low ul .li-border {
+  margin-right: 240px;
+}
+
+.mypage .left-mypage .left-my-low ul .li-border li {
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 30px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+
+.mypage .right-mypage {
+  width: 70%;
+  height: 100%;
+  position: relative;
+}
+
+.mypage .right-mypage .profile.in-calendar {
+  visibility: hidden;
+}
+
+.mypage .right-mypage .profile.in-graph {
+  visibility: hidden;
+}
+
+.mypage .right-mypage .profile.in-profile {
+  visibility: visible;
+}
+
+.mypage .right-mypage .profile .right-my-hight {
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: black;
+}
+
+.mypage .right-mypage .profile .right-my-hight .profile-header {
+  height: 50px;
+  padding-top: 10px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mypage .right-mypage .profile .right-my-hight .profile-header .profile-title {
+  font-weight: normal;
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+.mypage .right-mypage .profile .right-my-hight .profile-header span {
+  margin-right: 10px;
+  height: 40px;
+  width: 50px;
+  border-bottom: 1px solid white;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.mypage .right-mypage .profile .right-my-hight .profile-text {
+  margin: 10px;
+  height: 300px;
+  border: 2px solid white;
+}
+
+.mypage .right-mypage .profile .right-my-low {
+  height: 50%;
+  width: 100%;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50vh;
+}
+
+.mypage .right-mypage .profile .right-my-low .my-photo-title {
+  margin-left: 50px;
+  padding-top: 17px;
+  font-size: larger;
+}
+
+.mypage .right-mypage .profile .right-my-low .pad {
+  padding: 30px 0;
+}
+
+.mypage .right-mypage .graph {
+  position: absolute;
+  top: 100px;
+  visibility: hidden;
+}
+
+.mypage .right-mypage .graph.in-calendar {
+  visibility: hidden;
+}
+
+.mypage .right-mypage .graph.in-graph {
+  visibility: visible;
+}
+
+.mypage .right-mypage .graph.in-profile {
+  visibility: hidden;
+}
+
+.mypage .right-mypage .calendar {
+  position: absolute;
+  top: 50px;
+  visibility: hidden;
+}
+
+.mypage .right-mypage .calendar.in-calendar {
+  visibility: visible;
+}
+
+.mypage .right-mypage .calendar.in-graph {
+  visibility: hidden;
+}
+
+.mypage .right-mypage .calendar.in-profile {
+  visibility: hidden;
+}
 /*# sourceMappingURL=user.css.map */

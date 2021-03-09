@@ -3,14 +3,11 @@
     <div class="left-my-hight">
       <div class="my-profile-img"></div>
       <div class="nickname-border">
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      
-        <%= render "users/shared/error_messages", resource: resource %>
-      
-        <div class="field-user">
-          <%= f.label :nickname %>
-          <%= f.text_field :nickname %>
-        </div>
+        <%= form_with model: @user, url: users_path do |f| %>
+          <div class="field-user">
+            <%= f.label :nickname %>
+            <%= f.text_field :nickname %>
+          </div>
         <% end %>
       </div>
     </div>
@@ -39,6 +36,15 @@
         <ul class = "photo-li">
          <span class = "list-json"></span>
             
+            <% @tweets.each do |tweet| %>
+            <li class="photo-up">
+              <div class="photo-img"></div>
+               <span><%= tweet.title%></span>
+             <% end %>
+             <div class="pad">
+              <%= paginate @tweets %>
+             </div>
+            </li> 
         </ul>
         <%# <ul class="my-photo-column">
           <li>

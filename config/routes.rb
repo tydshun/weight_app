@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
   get 'blogs/index'
   root to: 'tweets#index'
 
@@ -8,5 +9,5 @@ Rails.application.routes.draw do
   end
   devise_for :users
   resources :blogs
-
+  resources :users
 end
