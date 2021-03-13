@@ -8,6 +8,9 @@ class User < ApplicationRecord
   has_many :blogs
   has_one_attached :image
 
+  has_one_attached :avater
+
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end
