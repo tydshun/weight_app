@@ -1,72 +1,69 @@
+        <%= form_with model: @user do |f| %>
 <div class="mypage">
   <div class="left-mypage">
     <div class="left-my-hight">
-      <div class="my-profile-img"></div>
-      <div class="nickname-border">
-        <%= form_with model: @user, url: users_path do |f| %>
-          <div class="field-user">
-            <%= f.label :nickname %>
-            <%= f.text_field :nickname %>
-          </div>
+      <div class="my-profile-img">
+        <%= f.label :avater do %>
+          <%= image_tag('/images/avatar.jpg') %>
+          <%= f.file_field :avatar ,class: "my-avatar" %>
         <% end %>
+      </div>
+      <div class="nickname-border">
+        <%# <%= f.label :nickname %> 
+        <%= f.text_field :nickname %>/Nicknameの変更
       </div>
     </div>
     <div class="left-my-low">
     <ul>
       <div class="li-border">
-        <li>Profile</li>
-        <li>Calendar</li>
-        <li>Graph</li>
+        <li class="profile-btn">Profile</li>
+        <li class="calendar-btn">Calendar</li>
+        <li class="graph-btn">Graph</li>
       </div>
     </ul>
     </div>
   </div>
   <div class="right-mypage">
-    <div class="right-my-hight">
-      <div class="profile-header">
-        <h2 class="profile-title">Profile</h2>
-        <button class="save-btn">Save</button>
-      </div>
-      <div class="profile-text"></div>
-    </div>
-    <div class="right-my-low">
-      <div class="my-photo">
-        <div class="my-photo-title">My Posts List</div>
-        
-        <ul class = "photo-li">
-         <span class = "list-json"></span>
+    <section class="profile">
+        <div class="right-my-hight">
+          <div class="profile-header">
+            <h2 class="profile-title">Profile</h2>
+            <div>
+            <%= link_to root_path do%>
+              <span class="save-btn">Top</span>
+            <% end %>
+            <%= f.submit 'Save' ,class:"save-btn"%>
+              <%# <span class="save-btn">Save</span> %>
             
-            <% @tweets.each do |tweet| %>
-            <li class="photo-up">
-              <div class="photo-img"></div>
-               <span><%= tweet.title%></span>
-             <% end %>
-             <div class="pad">
-              <%= paginate @tweets %>
-             </div>
-            </li> 
-        </ul>
-        <%# <ul class="my-photo-column">
-          <li>
-            <div class="my-tweet-img"></div>
-            <div class="my-tweet-text">
-            <% @tweets.each do |tweet| %>
-            <%# <li class="photo-up">
-              <div class="photo-img"></div>
-               <%# <span><%= tweet.title%></span> 
-             <%# <% end %>
-            <%# </div>
-          </li>
-          <li>
-            <div class="my-tweet-img"></div>
-            <div class="my-tweet-text"></div> %>
-          <%# </li>
-          <li>
-            <div class="my-tweet-img"></div>
-            <div class="my-tweet-text"></div>  %>
-          <%# </li>  %>
-        <%# </ul>  %>
-      </div>
-    </div>
+            </div>
+          </div>
+          <div class="profile-text">
+            <%= f.text_area :profile ,class:"text-deco"%>
+          </div>
+        </div>    
+        <div class="right-my-low">
+          <div class="my-photo">
+            <div class="my-photo-title">My Posts List</div>
+            
+            <ul class = "photo-li">
+            <span class = "list-json"></span>
+                
+                <% @tweets.each do |tweet| %>
+                <li class="photo-up">
+                  <div class="photo-img"></div>
+                  <span><%= tweet.title%></span>
+                <% end %>
+                <div class="pad">
+                  <%= paginate @tweets %>
+                </div>
+                </li> 
+            </ul>
+          </div>
+        </div>
+    </section>
+    <section class="calendar">Calendar</section>
+    <section class="graph">Graph</section>
   </div>
 </div>
+<% end %>
+<%= javascript_pack_tag 'mypage.js' %>

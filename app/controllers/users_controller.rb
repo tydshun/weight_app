@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @tweets = Tweet.page(params[:page]).per(6).order('created_at DESC')
+    @blogs = @user.blogs
   end
 
   def edit
@@ -13,6 +14,6 @@ class UsersController < ApplicationController
   private
 
   def set_user
-   
+    # @user = User.find(params[:id])
   end
 end

@@ -40,6 +40,10 @@
         <%= f.label :title, "Title", class: "text1" %><br />
         <%= f.text_field :title, class: "text3" %>
         <%# <span class= "text1">Title</span> %>
+        
+        <%= f.label :image %>
+        <%= f.file_field :image, class: "tweet-image" %>
+
         <%= f.label :text, "Text", class: "text2" %><br />
         <%= f.text_area :text, class: "text4" %>
       <%# <span class="text2">Text</span> %>
@@ -62,7 +66,9 @@
          <span class = "list-json"></span>
             <% @tweets.each do |tweet| %>
             <li class="photo-up">
-              <div class="photo-img"></div>
+              <div class="photo-img">
+              <%= image_tag tweet.image.variant(resize: '150x92') if tweet.image.attached? %>
+              </div>
                <span><%= tweet.title%></span>
              <% end %>
             <%= paginate @tweets %>

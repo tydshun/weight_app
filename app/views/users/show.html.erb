@@ -1,7 +1,11 @@
 <div class="mypage">
   <div class="left-mypage">
     <div class="left-my-hight">
-      <div class="my-profile-img"></div>
+      <div class="my-profile-img">
+        
+        <%# <%= image_tag @user.image %>  
+        
+      </div>
       <div class="nickname-border">
         <p>Nickname</p>
       </div>
@@ -52,7 +56,47 @@
           </div>
         </div>
     </section>
-    <section class="calendar">Calendar</section>
+    <section class="calendar">
+      <p id="notice"><%= notice %></p>
+
+<h1 class = "toyoda">My Calendar</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th>時間</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.start_time.strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= link_to '詳細', blog %></td>
+        <td><%= link_to '編集', edit_blog_path(blog.id) %></td>
+        <td><%= link_to '削除',blog_path(blog.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'カレンダーに記述', new_blog_path %>
+
+<%= month_calendar events: @blogs do |date, blogs| %>
+  <%= date.day %>
+
+  <% blogs.each do |blog| %>
+    <div>
+      <%= link_to blog.title, blog %>
+    </div>
+  <% end %>
+<% end %>
+    </section>
     <section class="graph">Graph</section>
   </div>
 </div>
