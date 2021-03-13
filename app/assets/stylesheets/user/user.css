@@ -198,9 +198,18 @@ li {
 .mypage .left-mypage .left-my-hight .my-profile-img {
   height: 300px;
   width: 300px;
-  background-color: white;
   margin: 20px auto;
   display: block;
+  position: relative;
+}
+
+.mypage .left-mypage .left-my-hight .my-profile-img .my-avatar {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .mypage .left-mypage .left-my-hight .nickname-border {
@@ -303,6 +312,13 @@ li {
   margin: 10px;
   height: 300px;
   border: 2px solid white;
+}
+
+.mypage .right-mypage .profile .right-my-hight .profile-text .text-deco {
+  width: 100%;
+  height: 99%;
+  border: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .mypage .right-mypage .profile .right-my-low {
