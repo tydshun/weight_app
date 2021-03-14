@@ -328,9 +328,7 @@ li {
 
 .simple-calendar {
   width: 67vw  !important;
-  & .day{
-
-  }
+  
   & .today{
     background-color: rgba($color: #a4a4a4, $alpha: 0.3)!important;
   }
@@ -341,7 +339,7 @@ li {
     color: white;
     // border-bottom: 1px solid white;
     text-decoration: underline;
-    font-size: larger;
+    font-size: 13px;
     
     
   }
