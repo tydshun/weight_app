@@ -97,7 +97,33 @@
   <% end %>
 <% end %>
     </section>
-    <section class="graph">Graph</section>
+    <%# グラフ機能 %>
+    <section class="graph">
+    <div>
+      <%= form_with model: @weight,url: weight_bodys_path,method: "POST" do |f| %>
+        <%= f.number_field :weight_day, step: "0.1"%>
+        <%= f.submit '登録', class:'input_submit' %>
+      <% end %>
+      <%# step: "0.1"  %>
+      </div>
+
+      <div>
+      <%# 体重グラフ %>
+      <%= area_chart WeightBody.group_by_day(:created_at, range: 1.weeks.ago.midnight..Time.now).average(:weight_day),
+      width: "800px", height: "300px",
+      xtitle: "日付",ytitle: "体重",
+      decimal: ",",
+      # 小数点の設定
+      messages: {empty: "入力してくれ"}
+      %>
+      <%# ここまで %>
+      </div>
+
+      <div>
+        <%# <%= WeightBody.group_by_day(:created_at,).average(:weight_day) %>
+        <%= @weight.weight_day %>
+      </div>
+    </section>
   </div>
 </div>
 
