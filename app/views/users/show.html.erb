@@ -26,7 +26,7 @@
           <div class="profile-header">
             <h2 class="profile-title">Profile</h2>
             <div>
-            <%= link_to root_path do%>
+            <%= link_to destroy_user_session_path, method: :delete do%>
               <span class="save-btn">Top</span>
             <% end %>
             <%= link_to edit_user_path(@user) do %>

@@ -311,6 +311,8 @@ li {
     position: absolute;
     top: 50px;
     visibility: hidden;
+    height: 100vh;
+    width: 70vw;
     &.in-calendar {
       visibility: visible;
     }
@@ -321,5 +323,26 @@ li {
       visibility: hidden;
     }
   }
+  }
+}
+
+.simple-calendar {
+  width: 67vw  !important;
+  & .day{
+
+  }
+  & .today{
+    background-color: rgba($color: #a4a4a4, $alpha: 0.3)!important;
+  }
+  & .next-month{
+    background-color: #0936bb4a;
+  } 
+  & a {
+    color: white;
+    // border-bottom: 1px solid white;
+    text-decoration: underline;
+    font-size: larger;
+    
+    
   }
 }

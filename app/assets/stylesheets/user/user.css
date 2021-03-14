@@ -364,6 +364,8 @@ li {
   position: absolute;
   top: 50px;
   visibility: hidden;
+  height: 100vh;
+  width: 70vw;
 }
 
 .mypage .right-mypage .calendar.in-calendar {
@@ -376,5 +378,23 @@ li {
 
 .mypage .right-mypage .calendar.in-profile {
   visibility: hidden;
+}
+
+.simple-calendar {
+  width: 67vw  !important;
+}
+
+.simple-calendar .today {
+  background-color: rgba(164, 164, 164, 0.3) !important;
+}
+
+.simple-calendar .next-month {
+  background-color: #0936bb4a;
+}
+
+.simple-calendar a {
+  color: white;
+  text-decoration: underline;
+  font-size: larger;
 }
 /*# sourceMappingURL=user.css.map */

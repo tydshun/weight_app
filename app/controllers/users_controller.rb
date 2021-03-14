@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @tweets = Tweet.page(params[:page]).per(6).order('created_at DESC')
-    @blogs = @user.blogs
+    @blogs = @user.blogs.all
   end
 
   def edit
@@ -11,9 +11,15 @@ class UsersController < ApplicationController
     @tweets = Tweet.page(params[:page]).per(6).order('created_at DESC')
   end
 
+  
+
   private
 
   def set_user
     # @user = User.find(params[:id])
+  end
+
+  def blog_parameter
+    params.require(:blog).permit(:title, :content, :start_time)
   end
 end

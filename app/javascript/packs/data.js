@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded",()=>{
       const HTML = `
          <li class = "photo-up">
             <div class = "photo-img">
-              <img src="${item.image}" width:"50" height: "50">
+              <img src="${item.image}">
             </div>
             <span>
             ${item.title}
