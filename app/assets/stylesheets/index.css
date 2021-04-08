@@ -471,15 +471,19 @@ a {
 }
 
 .content-text.outview {
-  -webkit-animation: kf-animate-chars2 1.3s;
-          animation: kf-animate-chars2 1.3s;
+  -webkit-animation: kf-animate-chars2 2.6s;
+          animation: kf-animate-chars2 2.6s;
   opacity: 0;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .content-text.inview {
-  -webkit-animation: kf-animate-chars2 1.3s;
-          animation: kf-animate-chars2 1.3s;
+  -webkit-animation: kf-animate-chars2 2.6s;
+          animation: kf-animate-chars2 2.6s;
   opacity: 0;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 @-webkit-keyframes kf-animate-chars {
@@ -540,10 +544,15 @@ a {
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }
-  100% {
+  50% {
     opacity: 0;
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
   }
 }
 
@@ -553,10 +562,15 @@ a {
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }
-  100% {
+  50% {
     opacity: 0;
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
   }
 }
 
@@ -739,5 +753,10 @@ a {
   height: 100px;
   width: 150px;
   margin-bottom: 5px;
+}
+
+.tweet-photos {
+  height: 92px;
+  width: 150px;
 }
 /*# sourceMappingURL=index.css.map */

@@ -157,12 +157,16 @@ a{
   color: white;
   &.outview{
     // visibility: hidden;
-    animation: kf-animate-chars2 1.3s;
+    animation: kf-animate-chars2 2.6s;
     opacity: 0;
+    // display: none;
+    animation-fill-mode: both;
   }
   &.inview{
-    animation: kf-animate-chars2 1.3s;
+    animation: kf-animate-chars2 2.6s;
     opacity: 0;
+    animation-fill-mode: both;
+    // display: none;
   }
 }
 @keyframes kf-animate-chars {
@@ -190,9 +194,13 @@ a{
     opacity: 1;
     transform: translate(-50%,0);
   }
-  100% {
+  50% {
     opacity: 0;
     transform: translate(50%,0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(100%,0);
   }
 }
 .top-image2 {
@@ -359,6 +367,10 @@ a{
   width: 150px;
   
   margin-bottom: 5px;
+}
+.tweet-photos {
+  height: 92px;
+  width: 150px;
 }
 
 // Calendarのビュー

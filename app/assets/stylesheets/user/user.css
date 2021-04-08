@@ -397,4 +397,24 @@ li {
   text-decoration: underline;
   font-size: 13px;
 }
+
+.graph {
+  background-color: white;
+}
+
+.graph .my-title {
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+.graph .weight-field {
+  padding: 20px 0;
+  background-color: black;
+}
+
+.graph .today_weight {
+  color: white;
+  background-color: black;
+}
 /*# sourceMappingURL=user.css.map */
