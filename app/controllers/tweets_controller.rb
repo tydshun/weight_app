@@ -3,9 +3,11 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all
-    # @tweets = Tweet.page(params[:page]).per(6)
     @tweet = Tweet.new
-    # @blogs = Blog.all
+    # @tweet = Tweet.new(tweet_params)
+    # @tweet.save
+    # @image = url_for(@tweet.image)
+    # return render json:{tweet: @tweet, image: @image}
   end
 
   def new
@@ -15,10 +17,9 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = Tweet.new(tweet_params)
-    @image = @tweet.image
     @tweet.save
-    render json:{tweet: @tweet}
-  
+    @image = url_for(@tweet.image)
+    return render json:{tweet: @tweet, image: @image}
   end
 
   def show

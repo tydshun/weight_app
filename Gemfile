@@ -59,3 +59,4 @@ gem 'mini_magick'
 gem 'simple_calendar', '~> 2.0'
 gem "chartkick"
 gem 'kaminari'
+gem 'groupdate'

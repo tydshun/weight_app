@@ -15,18 +15,19 @@ document.addEventListener("DOMContentLoaded",()=>{
         return null;
       }
       const item = XHR.response.tweet;
+      const image_url = XHR.response.image;
       const list = document.querySelector(".list-json");
       const formText = document.querySelector(".text3");
       const formText2 = document.querySelector(".text4");
       const HTML = `
-         <li class = "photo-up">
+        <li class = "photo-up">
             <div class = "photo-img">
-              <img src="${item.image}">
+              <img src="${image_url}" width="150" height="92">
             </div>
             <span>
             ${item.title}
             </span>
-         </li>`;
+        </li>`;
       list.insertAdjacentHTML("afterend",HTML);
       formText.value = "";
       formText2.value = "";

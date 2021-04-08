@@ -344,3 +344,20 @@ li {
     
   }
 }
+
+.graph {
+  background-color: white;
+  & .my-title {
+    background-color: black;
+    color: white;
+    margin: 0;
+  }
+  & .weight-field {
+    padding: 20px 0;
+    background-color: black;
+  }
+  & .today_weight {
+    color: white;
+    background-color: black;
+  }
+}

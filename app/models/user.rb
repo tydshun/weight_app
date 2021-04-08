@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :profile, length: { maximum: 200 }
 
   has_many :blogs
+  has_many :weights
   has_one_attached :image
 
   has_one_attached :avater
